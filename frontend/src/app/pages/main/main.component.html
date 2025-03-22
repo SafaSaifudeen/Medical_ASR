@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>Transcribe Audio to Text</h1>
+  <p>Transcribe speech and voice recordings to text in no time. Free AI audio-to-text converter.</p>
+
+  <div class="upload-section">
+    <h2>Upload your file</h2>
+    <p>Click Choose File button to get started or drag and drop files to upload.</p>
+    <p *ngIf="fileName">Uploaded File: {{ fileName }}</p> <!-- Display uploaded file name -->
+    <div *ngIf="audioUrl">
+      <audio [src]="audioUrl" controls></audio>
+    </div>
+  </div>
+
+  <!-- Custom file upload button -->
+  <label for="fileInput" class="custom-file-upload">
+    {{ fileName ? 'Choose Another File' : 'Choose File' }}
+    
+  </label>
+  <input type="file" id="fileInput" (change)="onFileChange($event)"/>
+
+  <!-- Audio player -->
+  <!-- <div *ngIf="audioUrl">
+    <audio [src]="audioUrl" controls></audio>
+  </div> -->
+
+  <h2 class="transcription-title">Transcription</h2>
+  <div class="transcription-section">
+    <!-- Spinner section (shown when loading is true) -->
+    <div *ngIf="loading" class="spinner">
+      <div class="loader"></div>
+      <p>Processing...</p>
+    </div>
+
+    <!-- Transcription content (shown when loading is false) -->
+    <div *ngIf="!loading && transcription">
+      <p>{{ transcription }}</p> <!-- Display transcription result -->
+    </div>
+  </div>
+</div>

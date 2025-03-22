@@ -1,0 +1,2 @@
+curl --location 'http://localhost:5001/transcribe' \
+--form 'file=@"./api/files/OSR_us_000_0010_8k.wav"'

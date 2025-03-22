@@ -1,0 +1,6 @@
+flask
+torch
+flask_cors
+tensorflow
+numpy
+matplotlib
