@@ -1,12 +1,12 @@
 # LLM Based ASR for Medical Documentation
 
 ## 📌 Overview  
-Final year project automatic speech recognition for medical documentation using contextual word embedding The integration of Automatic Speech Recognition and Contextual Word Embedding represents a significant advancement in medical documentation. These technologies promise to enhance accuracy, efficiency, and overall patient care in healthcare settings.
+Final year project automatic speech recognition for medical documentation using contextual understanding The integration of Automatic Speech Recognition and Contextual Word Embedding represents a significant advancement in medical documentation. These technologies promise to enhance accuracy, efficiency, and overall patient care in healthcare settings.
 
 ## 🚀 Tech Stack  
 - **Frontend**: Angular  
 - **Backend**: Flask  
-- **ML Frameworks**: PyTorch, TensorFlow, Transformers  
+- **ML Frameworks**: PyTorch, TensorFlow  
 
 ## 🔧 Installation  
 
