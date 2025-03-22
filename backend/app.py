@@ -15,7 +15,7 @@ CORS(app)
 os.makedirs('./files', exist_ok=True)
 
 # Load the saved model
-model = keras.models.load_model('../ml/models/model_weights.weights.h5', compile=False)
+model = keras.models.load_model('../ml/models/my_model.h5', compile=False)
 
 ## Model Params
 # Define the same preprocessing parameters used during training
@@ -77,7 +77,7 @@ def transcribe_audio(audio_file_path):
 
     print("Predicted transcription:")
     print(transcription)
-    return "Test"
+    return transcription
 
 @app.route('/transcribe', methods=['POST'])
 def transcribe():
