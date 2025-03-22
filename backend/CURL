@@ -1,0 +1,2 @@
+curl --location 'http://localhost:5001/transcribe' \
+--form 'file=@"/Users/<user>/Downloads/WhatsApp Ptt 2025-02-24 at 22.48.07.ogg"'
