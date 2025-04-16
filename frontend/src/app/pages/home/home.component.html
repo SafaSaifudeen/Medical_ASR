@@ -1,1 +1,41 @@
-<p>home works!</p>
+<div class="container" [@fadeInOut]>
+  <h1 class="title" [@fadeInOut]>Med Dox</h1>
+  <h1 class="title-t2" [@fadeInOut]>MEDICAL SPEECH TO TEXT</h1>
+  
+  <div class="content-wrapper">
+    <div class="cards-section">
+      <!-- Speech Transcription Card -->
+      <div class="card" 
+           [@cardHover]="cardStates['transcription']"
+           (mouseenter)="onCardHover('transcription', true)"
+           (mouseleave)="onCardHover('transcription', false)">
+        <div class="card-icon">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <h3>Speech Transcription</h3>
+        <p>Transcribe speech to text</p>
+      </div>
+
+      <!-- Medical Documentation Card -->
+      <div class="card"
+           [@cardHover]="cardStates['documentation']"
+           (mouseenter)="onCardHover('documentation', true)"
+           (mouseleave)="onCardHover('documentation', false)">
+        <div class="card-icon">
+          <i class="fas fa-notes-medical"></i>
+        </div>
+        <h3>Medical Documentation</h3>
+        <p>Documents Doctor-Patient Conversation</p>
+      </div>
+
+    </div>
+
+    <div class="description-section">
+      <p class="description">
+        Aims to develop an advanced Automatic Speech Recognition (ASR) system designed for medical documentation. Focused on accurately transcribing doctor-patient conversations, the system addresses challenges like accent variations among diverse English speakers and enhances contextual understanding within the medical domain. By building the ASR model, we aim to improve transcription accuracy, ensuring reliable medical records and streamlined clinical workflows.
+      </p>
+    </div>
+  </div>
+
+  <button class="start-button" routerLink="/main" [@fadeInOut]>START</button>
+</div>

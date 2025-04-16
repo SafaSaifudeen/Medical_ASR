@@ -1,6 +1,7 @@
 flask
+flask-cors
 torch
-flask_cors
-tensorflow
-numpy
-matplotlib
+torchaudio
+transformers
+soundfile
+nltk

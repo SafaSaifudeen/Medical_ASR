@@ -2,12 +2,16 @@
   <h1>Transcribe Audio to Text</h1>
   <p>Transcribe speech and voice recordings to text in no time. Free AI audio-to-text converter.</p>
 
-  <div class="upload-section">
+  <div class="upload-section" [class.dragging]="isDragging">
     <h2>Upload your file</h2>
     <p>Click Choose File button to get started or drag and drop files to upload.</p>
     <p *ngIf="fileName">Uploaded File: {{ fileName }}</p> <!-- Display uploaded file name -->
     <div *ngIf="audioUrl">
       <audio [src]="audioUrl" controls></audio>
+    </div>
+    <div *ngIf="isDragging" class="drag-overlay">
+      <i class="fas fa-cloud-upload-alt"></i>
+      <p>Drop your audio file here</p>
     </div>
   </div>
 
@@ -34,6 +38,16 @@
     <!-- Transcription content (shown when loading is false) -->
     <div *ngIf="!loading && transcription">
       <p>{{ transcription }}</p> <!-- Display transcription result -->
+      
+      <!-- Action buttons (only shown when transcription is available) -->
+      <div class="action-buttons">
+        <button class="download-button" (click)="downloadTranscription()">
+          <i class="fas fa-download"></i> Download Transcript
+        </button>
+        <button class="copy-button" (click)="copyToClipboard()">
+          <i class="fas fa-copy"></i> Copy to Clipboard
+        </button>
+      </div>
     </div>
   </div>
 </div>
